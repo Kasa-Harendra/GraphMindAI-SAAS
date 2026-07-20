@@ -1,0 +1,81 @@
+# ==========================================
+# Root Level Rules
+# ==========================================
+# Ignore everything in the root by default
+/*
+
+# ... except these essential project directories/files
+!/backend/
+!/frontend/
+!/docker-compose.yml
+!/README.md
+!/.gitignore
+
+# ==========================================
+# Backend Rules (Python / FastAPI / Celery)
+# ==========================================
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/*$py.class
+backend/.venv/
+backend/venv/
+backend/ENV/
+backend/env/
+backend/.env
+backend/*.log
+backend/celery.log
+backend/uploads/
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.mypy_cache/
+
+# ==========================================
+# Frontend Rules (Next.js / React)
+# ==========================================
+frontend/node_modules/
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+
+frontend/coverage/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+frontend/.DS_Store
+frontend/*.pem
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+frontend/.env*
+frontend/.vercel
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# ==========================================
+# General / OS generated files
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Secrets and Credentials (Global)
+# ==========================================
+.env
+.env.*
+*.env
+*client_secret*.json
+credentials.json
+token.json
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets/
